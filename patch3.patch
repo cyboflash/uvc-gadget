@@ -1,0 +1,21 @@
+This patch adds uvc device file closing when inits in uvc_open() function fails.
+
+Signed-off-by: Robert Baldyga <r.baldyga@xxxxxxxxxxx>
+---
+ uvc-gadget.c |    1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/uvc-gadget.c b/uvc-gadget.c
+index 0764838..5512e2c 100644
+--- a/uvc-gadget.c
++++ b/uvc-gadget.c
+@@ -880,6 +880,7 @@ uvc_open(struct uvc_device **uvc, char *devname)
+ 	return 0;
+ 
+ err:
++	close(fd);
+ 	return ret;
+ }
+ 
+-- 
+1.7.9.5
