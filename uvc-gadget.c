@@ -1860,7 +1860,6 @@ uvc_events_process_data(struct uvc_device *dev, struct uvc_request_data *data)
 {
   struct uvc_streaming_control *target;
   struct uvc_streaming_control *ctrl;
-   struct v4l2_format fmt;
   const struct uvc_format_info *format;
   const struct uvc_frame_info *frame;
   const unsigned int *interval;
