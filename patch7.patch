@@ -1,9 +1,0 @@
---- b/uvc-gadget.c
-+++ a/uvc-gadget.c
-@@ -877,7 +877,6 @@
-    return 0;
- 
- err:
--	close(fd);
-    return ret;
- }

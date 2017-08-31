@@ -36,7 +36,7 @@
 #include <linux/usb/video.h>
 #include <linux/videodev2.h>
 
-#include "gadget/function/uvc.h"
+#include "drivers/usb/gadget/function/uvc.h"
 
 /* Enable debug prints. */
 #undef ENABLE_BUFFER_DEBUG

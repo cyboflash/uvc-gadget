@@ -1,10 +1,10 @@
 CROSS_COMPILE ?= aarch64-linux-gnu-
 ARCH          ?= aarch64
-KERNEL_DIR    ?= $(HOME)/myfs/pkg/Xilinx/petalinux-v2016.3-final/tools/linux-i386/aarch64-linux-gnu/aarch64-linux-gnu/libc/usr
+KERNEL_DIR    ?= $(HOME)/myfs/pkg/Xilinx/petalinux-v2017.2-final/tools/linux-i386/aarch64-linux-gnu/aarch64-linux-gnu/libc/usr
 
 CC             := $(CROSS_COMPILE)gcc
 KERNEL_INCLUDE := -I$(KERNEL_DIR)/include -I$(KERNEL_DIR)/arch/$(ARCH)/include
-INCLUDE        := -I$(HOME)/myfs/pkg/Xilinx/petalinux-v2016.3-final/components/linux-kernel/xlnx-4.6/drivers/usb
+INCLUDE        := -I$(HOME)/myfs/pkg/Xilinx/petalinux-v2017.2-final/components/linux-kernel/xlnx-4.9/drivers/usb
 CFLAGS         := -W -Wall -g $(KERNEL_INCLUDE) $(INCLUDE)
 LDFLAGS        := -g
 
